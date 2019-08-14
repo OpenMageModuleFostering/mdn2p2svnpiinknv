@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <EasyMart_CustomerRelateOrder>
+            <active>true</active>
+            <codePool>community</codePool>
+        </EasyMart_CustomerRelateOrder>
+    </modules>
+</config>

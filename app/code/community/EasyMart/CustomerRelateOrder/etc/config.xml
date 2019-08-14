@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Easy Mart
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to me.adarshkhatri@gmail.com so we can send you a copy immediately.
+ *
+ * @category    Easy Mart
+ * @package     Customer Relate with Order
+ * @copyright   Copyright (c) 2015 Easy Mart (http://www.easymart.com.au)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <EasyMart_CustomerRelateOrder>
+            <version>1.0.1</version>
+        </EasyMart_CustomerRelateOrder>
+    </modules>
+    
+    <global>
+        <models>
+            <relate_order>
+                <class>EasyMart_CustomerRelateOrder_Model</class>
+            </relate_order>
+        </models>
+        <helpers>
+            <relate_order>
+                <class>EasyMart_CustomerRelateOrder_Helper</class>
+            </relate_order>
+        </helpers>
+        <resources>
+            <relate_order_setup>
+                <setup>
+                    <module>EasyMart_CustomerRelateOrder</module>
+                </setup>
+            </relate_order_setup>
+        </resources>
+        <blocks>
+            <relate_order><class>EasyMart_CustomerRelateOrder_Block</class></relate_order>
+            <adminhtml>
+                <rewrite>
+                    <customer_edit_tabs>EasyMart_CustomerRelateOrder_Block_Adminhtml_Customer_Edit_Tabs</customer_edit_tabs>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        
+        <events>
+        <checkout_cart_product_add_after>
+            <observers>
+                <ucs_catalogorder_checkout_cart_product_add_after>
+                    <type>model</type>
+                    <class>EasyMart_CustomerRelateOrder_Model_Observer</class>
+                    <method>checkoutCartProductAddAfter</method>
+                </ucs_catalogorder_checkout_cart_product_add_after>
+            </observers>
+        </checkout_cart_product_add_after>
+
+        <catalog_product_save_before>
+            <observers>
+                <profitandtotalcost_profitandtotalcomputation_observer>
+                    <type>singleton</type>
+                    <class>EasyMart_CustomerRelateOrder_Model_Observer</class>
+                    <method>addCostAndShipping</method>
+                </profitandtotalcost_profitandtotalcomputation_observer>
+            </observers>
+        </catalog_product_save_before>      
+    </events>
+        
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <use>admin</use>
+                    <modules>
+                        <relate_order after="Mage_Adminhtml">EasyMart_CustomerRelateOrder_Adminhtml</relate_order>
+                    </modules>
+                    <frontName>relate</frontName>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    
+    <adminhtml>
+        <translate>
+            <modules>
+                <EasyMart_CustomerRelateOrder>
+                    <files>
+                        <default>EasyMart/CustomerRelateOrder.csv</default>
+                    </files>
+                </EasyMart_CustomerRelateOrder>
+            </modules>
+        </translate>
+        
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <relate_order translate="title" module="relate_order">
+                                            <title>Relate Order Settings</title>
+                                        </relate_order>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

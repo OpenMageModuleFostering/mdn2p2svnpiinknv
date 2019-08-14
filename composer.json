@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/MdN2p2sVnPiInKNv",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "This extension lets you relate customer with existing order.",
+    "authors": [
+    {
+        "name": "Adarsh Khatri",
+        "email": "me.adarshkhatri@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
