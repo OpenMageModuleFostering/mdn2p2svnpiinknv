@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>MdN2p2sVnPiInKNv</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -12,11 +12,11 @@
 2. Customer now registers to the site and now ask admin to make that order available in frontend.&#xD;
 3. Admin goes to "Manage Customer" section and simply relates that order&#xD;
 4. Now, customer can have access that order when he/she logs in.</description>
-    <notes>This extension will allow to relate with order only if that order's email ID and customer's email ID matches as well as order is created as guest from frontend.</notes>
+    <notes>Removed few code smell.</notes>
     <authors><author><name>Adarsh Khatri</name><user>admin</user><email>me.adarshkhatri@gmail.com</email></author></authors>
-    <date>2015-09-24</date>
-    <time>11:48:37</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="EasyMart_CustomerRelateOrder.xml" hash="48d3f62758da1d24d1eba1e355afbc10"/></dir></target><target name="magecommunity"><dir name="EasyMart"><dir name="CustomerRelateOrder"><dir name="Block"><dir name="Adminhtml"><dir name="Customer"><dir name="Edit"><dir name="Tabs"><file name="Relate.php" hash="5f8afbaafe029befbb7d11c3b83fab34"/></dir><file name="Tabs.php" hash="b1b0313c31dfa34fcf1e493c6d6881f6"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="e297e75889d90f50c90e99e6b2479ebc"/></dir><dir name="Model"><file name="Observer.php" hash="d2c729c81d65a31a585c937bea155b87"/><file name="Relate.php" hash="e01a73974ab90333bd85d63f1c9af8f5"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="RelateController.php" hash="1ed906d41d12db9be3a845184f61a459"/></dir><file name="IndexController.php" hash="f1d83960db42c015cb4f9b2a2113c8ac"/></dir><dir name="etc"><file name="config.xml" hash="fdc3050ecdae48e43c99babc663f5f07"/></dir><file name=".DS_Store" hash="336a1ceba03a2cd8e83d01ba14f3ea45"/></dir></dir></target><target name="magelocale"><dir name="en_US"><dir name="EasyMart"><file name="CustomerRelateOrder.csv" hash="05b104f4ed01690ea750f3bc66b63d27"/></dir></dir></target></contents>
+    <date>2015-10-16</date>
+    <time>06:59:31</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="EasyMart_CustomerRelateOrder.xml" hash="48d3f62758da1d24d1eba1e355afbc10"/></dir></target><target name="magecommunity"><dir name="EasyMart"><dir name="CustomerRelateOrder"><dir name="Block"><dir name="Adminhtml"><dir name="Customer"><dir name="Edit"><dir name="Tabs"><file name="Relate.php" hash="5f8afbaafe029befbb7d11c3b83fab34"/></dir><file name="Tabs.php" hash="b1b0313c31dfa34fcf1e493c6d6881f6"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="e297e75889d90f50c90e99e6b2479ebc"/></dir><dir name="Model"><file name="Relate.php" hash="e01a73974ab90333bd85d63f1c9af8f5"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="RelateController.php" hash="1ed906d41d12db9be3a845184f61a459"/></dir><file name="IndexController.php" hash="f1d83960db42c015cb4f9b2a2113c8ac"/></dir><dir name="etc"><file name="config.xml" hash="694bf3eabba3b62ab7e977ef880d384b"/></dir><file name=".DS_Store" hash="336a1ceba03a2cd8e83d01ba14f3ea45"/></dir></dir></target><target name="magelocale"><dir name="en_US"><dir name="EasyMart"><file name="CustomerRelateOrder.csv" hash="05b104f4ed01690ea750f3bc66b63d27"/></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

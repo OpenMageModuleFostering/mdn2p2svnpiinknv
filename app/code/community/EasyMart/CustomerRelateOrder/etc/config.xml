@@ -22,7 +22,7 @@
 <config>
     <modules>
         <EasyMart_CustomerRelateOrder>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </EasyMart_CustomerRelateOrder>
     </modules>
     
@@ -52,28 +52,6 @@
                 </rewrite>
             </adminhtml>
         </blocks>
-        
-        <events>
-        <checkout_cart_product_add_after>
-            <observers>
-                <ucs_catalogorder_checkout_cart_product_add_after>
-                    <type>model</type>
-                    <class>EasyMart_CustomerRelateOrder_Model_Observer</class>
-                    <method>checkoutCartProductAddAfter</method>
-                </ucs_catalogorder_checkout_cart_product_add_after>
-            </observers>
-        </checkout_cart_product_add_after>
-
-        <catalog_product_save_before>
-            <observers>
-                <profitandtotalcost_profitandtotalcomputation_observer>
-                    <type>singleton</type>
-                    <class>EasyMart_CustomerRelateOrder_Model_Observer</class>
-                    <method>addCostAndShipping</method>
-                </profitandtotalcost_profitandtotalcomputation_observer>
-            </observers>
-        </catalog_product_save_before>      
-    </events>
         
     </global>
     <admin>
