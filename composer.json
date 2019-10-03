@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/MdN2p2sVnPiInKNv",
+    "name": "openmage-module-fostering\/mdn2p2svnpiinknv",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "This extension lets you relate customer with existing order.",
     "authors": [
